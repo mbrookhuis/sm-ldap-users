@@ -1,0 +1,58 @@
+# configuration file for sm-ldap-users.py
+#
+
+# suma_server: FQDN of the server
+suma_server:
+
+# suma_user: user in suse manager with the rights to manage users
+suma_user:
+
+# suma_password: password of the suma_user
+suma_password:
+
+# log_dir: directory to store the log file. Default on linux is /var/log/sm-ldap-users
+log_dir: /var/log/sm-ldap-users
+
+# log_level: log level for the log (both screen as file). DEBUG is the default.  the following values are valid:
+# DEBUG: info warning error debug
+# INFO: info warning error
+# WARNING: warning error
+# ERROR: error
+log_level: DEBUG
+
+# default_user_mail: default mail address to be used for the user to be created is no mail address is given. Default is nomail@nomail.nomail
+# Note that if the default address is used, there will be many error entries in the mail system.
+default_user_mail: nomail@nomail.nomail
+
+# delete_user: if this is set to True, a user will be deleted when it is not present anymore in the ldap groups and have pam enabled.
+# if set to False, the user will only be disabled. False is the default.
+delete_user: False
+
+# ldap_default_bind_dn: user to be used to request group members and information per member. This user should have at least read rights.
+ldap_default_bind_dn:
+
+# ldap_password: password of the above user
+ldap_password:
+
+# ldap_search_base:  where to look for the users and groups
+ldap_search_base:
+
+# ldap_uri: ldap servers address preceding with ldap:// or ldaps://
+ldap_uri:
+
+# Roles: will define which roles the member of a group will get.
+# first define the ldap group
+# and then one or more (in a comma-delimited list) the roles the members of the group should get.
+# the following roles are valid:
+#   - activation_key_admin
+#   - channel_admin
+#   - config_admin
+#   - image_admin
+#   - org_admin
+#   - satellite_admin
+#   - system_group_admin
+
+roles:
+  <ldap_group>: <SUSE Manager User role>
+  <ldap_group>: <SUSE Manager User role>
+  <ldap_group>: <SUSE Manager User role>
