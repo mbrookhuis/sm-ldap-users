@@ -17,7 +17,7 @@ To install this project, perform the following steps:
 ```bash
 zypper in python3 python3-PyYAML
 pip install yaml
-- ```
+```
 - On the server or PC, where it should run, create a directory. On linux, e.g. /opt/sm-ldap-users
 - Copy all the file to this directory.
 - Edit the configsm.yaml. All parameters should be entered. Tip: for the ldap information, the best would be to use the same as for SSSD.
@@ -26,7 +26,7 @@ pip install yaml
 chmod 600 * 
 chmod 700 sm-ldap-users.py
 chown root:root * 
-- ```
+```
 
 ## Usage
 This is very simple. Once the configsm.yaml contains the correct information, executing the following will do the magic:
