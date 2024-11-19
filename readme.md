@@ -5,11 +5,12 @@ This tool is used to create users in SUSE Manager Server based on LDAP/AD groups
 Also, the tool will check if existing users still have the role they should have, and, if not, it will be corrected. The same for if a user is disabled, it will be enabled again.
 If a users is not present in the LDAP/AD groups anymore, it will be disabled or deleted, depending on the configuration.
 
-The code is writen for Python 3.6 (the default with SLES15.x), but will also work with newer versions.
+The code is written for Python 3.6 (the default with SLES15.x), but will also work with newer versions.
 
 ## Table of contents
 - [Installation](#installation)
 - [Usage](#usage)
+
 
 ## Installation
 To install this project, perform the following steps:
